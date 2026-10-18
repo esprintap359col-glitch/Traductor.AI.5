@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10172a">
+  <meta name="description" content="Traductor.AI traduce texto y lee texto de imágenes">
+  <title>Traductor.AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><div class="logo">文</div><div><h1>Traductor<span>.AI</span></h1><p>Entiende el mundo, al instante</p></div></header>
+  <main>
+    <section class="card">
+      <div class="langs">
+        <label>Desde<select id="from"><option value="es">Español</option><option value="en">Inglés</option><option value="fr">Francés</option><option value="pt">Portugués</option><option value="de">Alemán</option><option value="it">Italiano</option><option value="ja">Japonés</option><option value="zh">Chino</option><option value="auto">Detectar idioma</option></select></label>
+        <button id="swap" class="swap" aria-label="Intercambiar idiomas">⇄</button>
+        <label>Hacia<select id="to"><option value="en">Inglés</option><option value="es">Español</option><option value="fr">Francés</option><option value="pt">Portugués</option><option value="de">Alemán</option><option value="it">Italiano</option><option value="ja">Japonés</option><option value="zh">Chino</option></select></label>
+      </div>
+      <label class="section-label" for="input">Texto original</label>
+      <textarea id="input" placeholder="Escribe o pega algo para traducir…"></textarea>
+      <div class="buttons">
+        <button id="mic" class="secondary">🎙 Hablar</button>
+        <button id="camera" class="secondary">📷 Leer imagen</button>
+        <button id="translate" class="primary">Traducir ↗</button>
+      </div>
+      <input type="file" id="image" accept="image/*" capture="environment" hidden>
+      <p id="status">Listo. La traducción requiere Internet.</p>
+    </section>
+    <section class="card">
+      <div class="result-title"><span class="section-label">Traducción</span><button id="speak" class="secondary">🔊 Escuchar</button></div>
+      <div id="output" aria-live="polite">Tu traducción aparecerá aquí…</div>
+      <div class="buttons"><button id="copy" class="secondary">Copiar</button><button id="clear" class="secondary">Borrar</button></div>
+    </section>
+    <p class="notice">La traducción y lectura de imágenes necesitan Internet. El dictado depende del dispositivo y navegador. La cámara lee una foto; aún no traduce vídeo continuo en vivo.</p>
+  </main>
+  <footer>Traductor.AI</footer>
+  <script src="app.js"></script>
+</body>
+</html>

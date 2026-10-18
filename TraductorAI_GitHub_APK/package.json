@@ -1,0 +1,16 @@
+{
+  "name": "traductor-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Traductor.AI para Android e iOS usando Capacitor",
+  "scripts": {
+    "build": "echo \"Los archivos web están en www/\"",
+    "android:sync": "cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/core": "^7.4.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3"
+  }
+}
